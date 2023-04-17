@@ -1,27 +1,27 @@
-#Paso 1: Importamos las librerias FastAPI, pandas y numpy
+# Importamos las librerias FastAPI, pandas y numpy
+import uvicorn
 import pandas as pd, numpy as np
 from fastapi import FastAPI
-#Paso 2: importamos los datos a utilizar
-data_plataformas = pd.read_csv('plataforma_prom.csv')
-#Paso 3: crea un "instance" de FastAPI
+
+
 app = FastAPI()
 
 async def root():
-    return{"message": "Hello my friends"}
+    return{"message": "Hello, my friends"}
 
 #Consultas
 '''
 Película con mayor duración con filtros opcionales de AÑO, PLATAFORMA Y TIPO DE DURACIÓN.
     La función debe llamarse get_max_duration(year, platform, duration_type) '''
     
-@app.get("/get_max_duration")
+@app.get("/get_max_duration/{year}/{platform}/{duration_type}")
 async def get_max_duration(year: int, platform: str, duration_type: str):
-    
+    data_plataformas = pd.read_csv('plataforma_prom.csv')
  
 
     # 1. Filtro por año
     filtro_anio = data_plataformas.loc[ data_plataformas['release_year'] == year ]
-
+     
     # 2. Filtro por plataforma
     # a: amazon, d: disney, h: hulu, n: netflix
     filtro_plataforma = filtro_anio.loc[ filtro_anio['Id'].str[0:1] == platform ]
@@ -40,9 +40,9 @@ async def get_max_duration(year: int, platform: str, duration_type: str):
 Cantidad de películas por plataforma con un puntaje mayor a XX en determinado año.
     La función debe llamarse get_score_count(platform, scored, year) '''
 
-@app.get("/get_score_count")
+@app.get("/get_score_count/{platform}/{scored}/{year}")
 async def get_score_count(platform: str, scored: float, year: int):
-    
+    data_plataformas = pd.read_csv('plataforma_prom.csv')
     # 1. Filtro por año
     filtro_anio = data_plataformas.loc[ data_plataformas['release_year'] == year ]
 
@@ -70,10 +70,10 @@ async def get_score_count(platform: str, scored: float, year: int):
 Cantidad de películas por plataforma con filtro de PLATAFORMA. 
     La función debe llamarse get_count_platform(platform) '''
 
-@app.get("/get_count_platform")
+@app.get("/get_count_platform/{platform}")
 async def get_count_platform(platform: str):
 
-    import pandas as pd
+    
     data_plataformas = pd.read_csv('plataformas_prom.csv', sep=',')
 
     # 1. Creamos nueva columna con letra de plataforma
@@ -96,10 +96,10 @@ async def get_count_platform(platform: str):
 Actor que más se repite según plataforma y año.
     La función debe llamarse get_actor(platform, year) '''
 
-@app.get("/get_actor")
+@app.get("/get_actor/{platform}/{year}")
 async def get_actor(platform: str, year: int):
 
-    import pandas as pd
+    
     data_plataformas = pd.read_csv('plataformas_prom.csv', sep=',')
     
     # 1. Filtramos los registros por año dado por parametro
