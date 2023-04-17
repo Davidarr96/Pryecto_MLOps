@@ -6,7 +6,9 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-async def root():
+@app.get('/')
+def index():
+    
     return{"message": "Hello, my friends"}
 
 #Consultas
@@ -16,7 +18,7 @@ Película con mayor duración con filtros opcionales de AÑO, PLATAFORMA Y TIPO 
     
 @app.get("/get_max_duration/{year}/{platform}/{duration_type}")
 async def get_max_duration(year: int, platform: str, duration_type: str):
-    data_plataformas = pd.read_csv('plataforma_prom.csv')
+    data_plataformas = pd.read_csv('plataformas_prom.csv')
  
 
     # 1. Filtro por año
@@ -42,7 +44,7 @@ Cantidad de películas por plataforma con un puntaje mayor a XX en determinado a
 
 @app.get("/get_score_count/{platform}/{scored}/{year}")
 async def get_score_count(platform: str, scored: float, year: int):
-    data_plataformas = pd.read_csv('plataforma_prom.csv')
+    data_plataformas = pd.read_csv('plataformas_prom.csv')
     # 1. Filtro por año
     filtro_anio = data_plataformas.loc[ data_plataformas['release_year'] == year ]
 
