@@ -120,3 +120,40 @@ async def get_actor(platform: str, year: int):
     most_frequent_actor = actor_counts.index[0]
         
     return most_frequent_actor
+
+
+'''
+ Cantidad de contenidos/productos que se publicó por país y año.
+     La función debe llamarse prod_per_county(tipo,pais,anio) '''
+
+@app.get('/prod_per_county/{tipo}/{pais}/{anio}')
+async def prod_per_county(tipo: str, pais: str, anio: int):
+
+    data_plataformas = pd.read_csv('plataformas_prom.csv', sep=',')
+    
+    # 1. Filtramos los datos por país y año
+    data_pais_anio = data_plataformas[(data_plataformas['Country'] == pais) & (data_plataformas['Year'] == anio)]
+
+    # 2. Contamos la cantidad de contenidos/productos según el tipo (pelicula o serie)
+    cantidad_contenidos = data_pais_anio[data_pais_anio['Type'] == tipo]['Title'].count()
+
+    # Devolvemos un diccionario con las variables solicitadas
+    return {'pais': pais, 'anio': anio, tipo: cantidad_contenidos}
+
+'''
+Cantidad total de contenidos/productos segun el rating de audencia.
+   La función debe llamarse get_contents(rating) '''
+     
+ @app.get('/get_contents/{rating}')
+async def get_contents(rating: str):
+    
+    data_plataformas = pd.read_csv('plataformas_prom.csv', sep=',')
+    
+    # 1. Filtramos los datos por rating de audiencia
+    data_rating = data_plataformas[data_plataformas['Rated'] == rating]
+    
+    # 2. Contamos la cantidad de contenidos/productos según el rating de audiencia
+    cantidad_contenidos = data_rating['Title'].count()
+    
+    # 3. Devolvemos un diccionario con las variables solicitadas
+    return {'rating': rating, 'contenido': cantidad_contenidos}
