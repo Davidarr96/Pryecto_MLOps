@@ -1,4 +1,3 @@
-[![](Plataformas)](https://media.urgente24.com/p/f67a20bf6a063f9ad94afde032452e49/adjuntos/319/imagenes/002/664/0002664234/hbo-netflix-cnnwebp.png)
 ## Bienvenidos a mi proyecto Machine Learning Operations (MLOps)
 Este es mí Proyecto individual donde encortraras la documentacion e instrucciones para la funcion de una api y un sistema de recomendacion de peliculas basado en puntajes.
 
