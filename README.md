@@ -3,16 +3,16 @@ Este es mí Proyecto individual donde encortraras la documentacion e instruccion
 
 ###Funcionalidades 
 
-- EDA_PI_MLOPS.ypynb -> archivo con el analisis exploratorio de los datos
-- ETL.ipynb -> notebook con el paso a paso  del ETL
-- READNE.md ->  instrucciones y documentacion del proyecto
-- SISTEMA_DE_RECOMENDACION.ipynb ->archivo con la funcion de recomendacion
-- main.py ->archivo de codigo para la api
-- plataforma_prom.csv ->csv con el datasets que utilizamos para la API
-- requirements.txt -> archivo de codigo para la api
+- [EDA_PI_MLOPS.ipynb](https://github.com/Davidarr96/Pryecto_MLOps/blob/main/EDA_PI_MLOPS.ipynb) -> archivo con el analisis exploratorio de los datos
+- [ETL.ipynb](https://github.com/Davidarr96/Pryecto_MLOps/blob/main/ETL.ipynb) -> notebook con el paso a paso  del ETL
+- [README.md](https://github.com/Davidarr96/Pryecto_MLOps/blob/main/README.md) ->  instrucciones y documentacion del proyecto
+- [SISTEMA_DE_RECOMENDACION.ipynb](https://github.com/Davidarr96/Pryecto_MLOps/blob/main/SISTEMA_DE_RECOMENDACION.ipynb) ->archivo con la funcion de recomendacion
+- [main.py](https://github.com/Davidarr96/Pryecto_MLOps/blob/main/main.py) ->archivo de codigo para la api
+- [plataforma_prom.csv](https://github.com/Davidarr96/Pryecto_MLOps/blob/main/plataformas_prom.csv) ->csv con el datasets que utilizamos para la API
+- [requirements.txt](https://github.com/Davidarr96/Pryecto_MLOps/blob/main/requirements.txt) -> archivo txt para el deployado de nuestra api
 
 ### Funciones que ejecuta la API
-🎉 Mensaje de bienvenida : [https://ejemplo-nombre-deploy-0u45.onrender.com](https://ejemplo-nombre-deploy-0u45.onrender.com)
+🎉 Mensaje de bienvenida : [Hola](https://ejemplo-nombre-deploy-0u45.onrender.com)
 
 ✔️ Película con mayor duración con filtros opcionales de AÑO, PLATAFORMA Y TIPO DE DURACIÓN.
 
@@ -23,17 +23,21 @@ Este es mí Proyecto individual donde encortraras la documentacion e instruccion
 
 🚀 [LINK](https://ejemplo-nombre-deploy-0u45.onrender.com/docs#/default/get_score_count_get_score_count__platform___scored___year__get)
 
+
 ✔️ Cantidad de películas por plataforma con filtro de PLATAFORMA.
 
 🚀 [LINK](https://ejemplo-nombre-deploy-0u45.onrender.com/docs#/default/get_count_platform_get_count_platform__platform__get)
+
 
 ✔️ Actor que más se repite según plataforma y año.
 
 🚀 [LINK](https://ejemplo-nombre-deploy-0u45.onrender.com/docs#/default/get_actor_get_actor__platform___year__get)
 
+
 ✔️ La cantidad de contenidos/productos que se publicó por país y año.
 
 🚀 [LINK](https://ejemplo-nombre-deploy-0u45.onrender.com/docs#/default/prod_per_county_prod_per_county__tipo___pais___anio__get)
+
 
 ✔️ La cantidad total de contenidos/productos  según el rating de audiencia dado.
 
@@ -44,9 +48,9 @@ Este es mí Proyecto individual donde encortraras la documentacion e instruccion
 
 ⚠️Las plataformas admitidas son: ['amazon','disney','hulu','netflix']
 
-⚠️ En caso que los datos de consulta sean erroneos se obtendra el siguiente mensaje: no es posible dar una respuesta, verifica los datos e intenta nuevamente
+⚠️ En caso que los datos de consulta sean erroneos se obtendra el siguiente mensaje: Not Found o internal error-.
 
-⚠️ Si ingresa una ruta no admitida recibira el siguiente mensaje: "detail":"Not Found"
+⚠️ El formato de tiempo es en min; en platadormas se admite la inicial de cada una (d=disney, a=amazon, n=netflix, h=hulu)
 
 ✨ MUCHAS GRACIAS ✨
 
