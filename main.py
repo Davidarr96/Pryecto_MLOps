@@ -144,7 +144,7 @@ async def prod_per_county(tipo: str, pais: str, anio: int):
 Cantidad total de contenidos/productos segun el rating de audencia.
    La función debe llamarse get_contents(rating) '''
      
- @app.get('/get_contents/{rating}')
+@app.get('/get_contents/{rating}')
 async def get_contents(rating: str):
     
     data_plataformas = pd.read_csv('plataformas_prom.csv', sep=',')
