@@ -1,7 +1,10 @@
 ## Bienvenidos a mi proyecto Machine Learning Operations (MLOps)
 Este es mí Proyecto individual donde encortraras la documentacion e instrucciones para la funcion de una api y un sistema de recomendacion de peliculas basado en puntajes.
 
-###Funcionalidades 
+
+![](https://user-images.githubusercontent.com/67664604/217914153-1eb00e25-ac08-4dfa-aaf8-53c09038f082.png)
+
+### Funcionalidades 
 
 - [EDA_PI_MLOPS.ipynb](https://github.com/Davidarr96/Pryecto_MLOps/blob/main/EDA_PI_MLOPS.ipynb) -> archivo con el analisis exploratorio de los datos
 - [ETL.ipynb](https://github.com/Davidarr96/Pryecto_MLOps/blob/main/ETL.ipynb) -> notebook con el paso a paso  del ETL
