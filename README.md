@@ -1,8 +1,11 @@
 ## Bienvenidos a mi proyecto Machine Learning Operations (MLOps)
-Este es mí Proyecto individual donde encortraras la documentacion e instrucciones para la funcion de una api y un sistema de recomendacion de peliculas basado en puntajes.
-
-
 ![](https://user-images.githubusercontent.com/67664604/217914153-1eb00e25-ac08-4dfa-aaf8-53c09038f082.png)
+
+Mi nombre es David Arrieta, y en esta ocación, la empresa Henry nos contrata como científicos de datos para realizar una API y un modelo de Machine Learning  para consultas y recomendaciones de las seguiente plataformas : Netflix, Amazon, Disney Plus y Hulu.
+
+La empresa nos provee los siguientes [Datasets](https://drive.google.com/drive/folders/1b49OVFJpjPPA1noRBBi1hSmMThXmNzxn)
+
+A continuación, indicaremos lo logrado por nuestro equipo:
 
 ### Funcionalidades 
 
@@ -57,4 +60,4 @@ Este es mí Proyecto individual donde encortraras la documentacion e instruccion
 
 ✨ MUCHAS GRACIAS ✨
 
-Agradezco el tiempo que te has tomado para testear mi api y darme un feedback :tw-1f4dd:
+Agradezco el tiempo que te has tomado para testear mi api y darme un feedback 💪
